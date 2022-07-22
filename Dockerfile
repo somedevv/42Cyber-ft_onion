@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:bullseye-slim
 EXPOSE 4242
 EXPOSE 80
 LABEL maintainer "some@somedevv.com"
@@ -8,7 +8,7 @@ RUN apt-get update && \
 	apt-get install openssh-server nginx apt-transport-https gpg curl libevent-dev -y
 
 # Configure Tor repositories
-RUN echo "deb https://deb.torproject.org/torproject.org stretch main\n deb-src https://deb.torproject.org/torproject.org stretch main" >> /etc/apt/sources.list && \
+RUN echo "deb https://deb.torproject.org/torproject.org bullseye main\n deb-src https://deb.torproject.org/torproject.org bullseye main" >> /etc/apt/sources.list && \
 	curl https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc | gpg --import && \
 	gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | apt-key add -
 
