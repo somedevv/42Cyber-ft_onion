@@ -17,6 +17,8 @@ allowed.
 
 ## Run the project with docker
 
+Before building, creaye a `secrets` folder on the root of the project and add your public ssh key to it.
+
 Build the project with `docker build -t somedevv/ft_onion .`
 
 Run the container with `docker run -d -p 80:80 -p 4242:4242 --name ft_onion somedevv/ft_onion`
@@ -27,5 +29,5 @@ To access the onion service use a Tor compatible browser. Look for the onion add
 
 ``` text
 [...]
-Onion address URL: xxxxxxxxx.onion
+Onion address URL: http://xxxxxxxxx.onion
 ```
