@@ -27,11 +27,11 @@ RUN service ssh start
 # Configure nginx server
 COPY ./configs/nginx.conf /etc/nginx/nginx.conf
 COPY ./configs/server_conf /etc/nginx/sites-available/default
-COPY ./index.html /usr/share/nginx/html/index.html
+COPY ./web/index.html /usr/share/nginx/html/index.html
 RUN echo "PrivateNetwork=yes" >> /lib/systemd/system/nginx.service
 
 # Configure tor server
-COPY ./torrc /etc/tor/torrc
+COPY ./configs/torrc /etc/tor/torrc
 RUN chown root /var/lib/tor
 
 COPY ./scripts/start-services.sh start-services.sh
