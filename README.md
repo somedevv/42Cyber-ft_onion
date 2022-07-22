@@ -1,6 +1,6 @@
 # 42Cyber-ft_onion
 
-Onion website accessible with Tor using Nginx as web server
+Onion website accessible with Tor using Nginx as web server, and, SSH access over the 4242 port.
 
 ## Project Rules
 
@@ -14,3 +14,18 @@ allowed.
 - Access to the static page via HTTP on port 80 must be enabled.
 - Access to the server via SSH on port 4242 must be enabled.
 - You should not open any ports or set any firewall rules.
+
+## Run the project with docker
+
+Build the project with `docker build -t somedevv/ft_onion .`
+
+Run the container with `docker run -d -p 80:80 -p 4242:4242 --name ft_onion somedevv/ft_onion`
+
+Connect over ssh with `ssh -i ~/.ssh/id_rsa sshuser@localhost -p 4242`
+
+To access the onion service use a Tor compatible browser. Look for the onion address in the container execution logs.
+
+``` text
+[...]
+Onion address URL: xxxxxxxxx.onion
+```

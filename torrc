@@ -1,0 +1,5 @@
+Log notice file /var/log/tor/log
+RunAsDaemon 1
+DataDirectory /var/lib/tor
+HiddenServiceDir /var/lib/tor/hiddenservicename/
+HiddenServicePort 80 unix:/var/run/nginx.sock
