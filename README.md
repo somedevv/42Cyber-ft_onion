@@ -42,3 +42,9 @@ To access the onion service use a Tor compatible browser. Look for the onion add
 [...]
 Onion address URL: http://xxxxxxxxx.onion
 ```
+
+## License
+
+The GNU General Public License v3 (GPL-3)
+
+Copyright © 2022 somedevv
