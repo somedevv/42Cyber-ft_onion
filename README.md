@@ -15,6 +15,17 @@ allowed.
 - Access to the server via SSH on port 4242 must be enabled.
 - You should not open any ports or set any firewall rules.
 
+``` text
+|-----------------|
+| Files to submit |
+|-----------------|
+|    index.html   |
+|    nginx.conf   |
+|    sshd_config  |
+|      torrc      |
+|-----------------|
+```
+
 ## Run the project with docker
 
 Before building, creaye a `secrets` folder on the root of the project and add your public ssh key to it.
