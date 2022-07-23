@@ -4,9 +4,9 @@ echo '[+] Starting ssh'
 echo '[+] Starting tor' &
 tor
 
-echo "Onion service URL: http://$( cat /var/lib/tor/hiddenservicename/hostname )" & 
+echo "Onion service URL: http://$( cat /var/lib/tor/hiddenservicename/hostname )\n" & 
 sed -i "s/server_name _;/server_name $( cat /var/lib/tor/hiddenservicename/hostname );/" /etc/nginx/sites-available/default & 
-echo '[+] Starting nginx\n' 
+echo '[+] Starting nginx' 
 
 nginx & 
 sleep infinity
