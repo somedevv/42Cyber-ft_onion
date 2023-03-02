@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:11.6-slim
 EXPOSE 4242
 EXPOSE 80
 LABEL maintainer "some@somedevv.com"
